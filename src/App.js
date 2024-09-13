@@ -13,7 +13,7 @@ const CustomProgram = () => {
 const [program, setProgram] = useState([])
 const [inputValue, setInputValue] = useState('')
 const [result, setResult] = useState(null)
-const [lastExec, setLastExec] = useState('')
+
 
 const handleAddOperation = (operation) => {
   setProgram([...program,operation])
@@ -33,7 +33,7 @@ const handleSubmit = (e) => {
 const calculatedResult = exeCuteProgram(initialValue,program)
 setResult(calculatedResult)
 setInputValue('')
-setLastExec("")
+
 
 
 }
@@ -41,7 +41,7 @@ setLastExec("")
 const handleClearProgram = ()  =>{
   setProgram([])
   setResult(null)
-  setLastExec('')
+  
 }
 
 const exeCuteProgram = (value,operations) => {
